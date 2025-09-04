@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import UserForm from './components/UserForm';
 import StatsDashboard from './components/StatsDashboard';
+import UserGrid from './components/UserGrid';
 
 const navStyle: React.CSSProperties = {
   display: 'flex',
@@ -27,10 +28,12 @@ function App() {
       <nav style={navStyle}>
         <Link to="/" style={linkStyle}>User Form</Link>
         <Link to="/dashboard" style={linkStyle}>Dashboard</Link>
+        <Link to="/users" style={linkStyle}>User Grid</Link>
       </nav>
       <Routes>
         <Route path="/" element={<UserForm />} />
         <Route path="/dashboard" element={<StatsDashboard />} />
+        <Route path="/users" element={<UserGrid />} />
       </Routes>
     </Router>
   );

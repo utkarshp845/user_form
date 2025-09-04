@@ -12,5 +12,7 @@ namespace backend.Models
         public string Phone { get; set; } // fourth step to add phone
 
         public DateTime CreatedAt { get; set; }
+
+        public string PasswordHash { get; set; } = string.Empty;
     }
 }
