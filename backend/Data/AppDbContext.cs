@@ -10,5 +10,6 @@ namespace backend.Data
         }
 
         public DbSet<UserData> Users { get; set; }
+        //public object UserData { get; internal set; }
     }
 }

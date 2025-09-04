@@ -7,9 +7,9 @@ namespace backend.Models
         public string Email { get; set; }
         public string Title { get; set; }
 
-        public string City { get; set; } // fourth step to add city
+        public string? City { get; set; } // fourth step to add city
                                          // Add other relevant user properties here
-        public string Phone { get; set; } // fourth step to add phone
+        public string? Phone { get; set; } // fourth step to add phone
 
         public DateTime CreatedAt { get; set; }
 

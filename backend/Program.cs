@@ -1,4 +1,5 @@
 using backend.Data;
+using backend.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,10 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+builder.Services.AddScoped<JwtHelper>();
+
+
 // Enable CORS for frontend communication
 builder.Services.AddCors(options =>
 {
@@ -18,6 +23,7 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()
               .AllowAnyHeader());
 });
+
 
 var app = builder.Build();
 
